@@ -40,7 +40,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |body|text|null: false|
-|text|string|null: false|
+|image|string|null: false|
 |group_id|integer|null: false|
 |user_id|integer|null: false|
 
