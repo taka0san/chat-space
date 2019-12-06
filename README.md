@@ -32,3 +32,16 @@
 ### Association
 - belongs_to :group
 - belongs_to :user
+
+## chatsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|body|text|
+|text|string|
+|group_id|integer|null: false|
+|user_id|integer|null: false|
+
+### Association
+- belong_to :user
+- belong_to :group
