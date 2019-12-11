@@ -1,7 +1,8 @@
 .side
   .side__top
     .side__top__box
-      %p.side__top__box__name name
+      %p.side__top__box__name 
+        = current_user.name
       %ul.side__top__box__icon
         %li
           %a.side__top__box__icon__edit
@@ -9,7 +10,7 @@
               %i.fas.fa-edit
         %li
           %a.side__top__box__icon__cog
-            = link_to "#" do
+            = link_to edit_user_path(current_user) do
               %i.fas.fa-cog
   .side__bottom
     .side__bottom__group
