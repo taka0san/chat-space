@@ -1,13 +1,16 @@
 .main
   .main__group
     .main__group__left
-      %p.main__group__left__name name
-      %p.main__group__left__member member
+      %p.main__group__left__name
+        = @group.name
+      %p.main__group__left__member
+        Menber :
+        - @group.users.each do |user|
+          = user.name
     .main__group__right
       .main__group__right__edit
-        %a
-          = link_to "#" do
-            Edit
+        = link_to edit_group_path(@group) do
+          Edit
   .main__list
     %p.main__list__name
       name
@@ -18,9 +21,10 @@
       %span 2019/11/20(wed)17:17:00
     %p.main__list__message おはよう！
   .main__form
-    .main__form__contents
-      %input.main__form__contents__text{type: "text", placeholder: "type a message"}
-      %label.main__form__contents__image
-        %i.fa.fa-image
-        %input{type: "file"}
-    %input.main__form__submit{type: "submit", value: "Send"}
+    = form_for [@group, @message] do |f|
+      .new_message__contents
+        = f.text_field :content, class: "new_message__contents__text", placeholder: "type a message"
+        = f.label :image, class: "new_message__contents__image" do
+          %i.fa.fa-image
+          = f.file_field :image
+      = f.submit "Send", class: "new_message__submit"

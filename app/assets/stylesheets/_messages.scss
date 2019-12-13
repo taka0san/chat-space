@@ -121,7 +121,7 @@
       margin-bottom: 46px;
     }
   }
-  &__form{
+  .new_message{
     height: 90px;
     width: calc(100vw - 300px);
     background-color: #d2d2d2;
@@ -138,10 +138,11 @@
         height: 50px;
         width: 100%;
         padding: 0 40px 0 10px;
+        border: none;
       }
       &__image{
         position: absolute;
-        top: 10px;
+        top: 17px;
         right: 10px;
         input{
           display: none;
