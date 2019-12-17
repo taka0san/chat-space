@@ -110,7 +110,8 @@
     width: calc(100vw - 300px);
     background-color: #fafafa;
     padding: 35px 40px 0;
-    margin-top: 100px;
+    margin: 100px 0 90px;
+    overflow: scroll;
     &__top{
       display: flex;
       &__name{
@@ -125,10 +126,10 @@
       }
     }
     &__bottom{
+      margin-bottom: 46px;
       &__message{
         color: #434A54;
         font-size: 14px;
-        margin-bottom: 46px;
       }
     }
   }
@@ -147,11 +148,14 @@
       display: flex;
       align-items: center;
       position: relative;
-      &__text{
-        height: 50px;
+      .field_with_errors{
         width: 100%;
-        padding: 0 40px 0 10px;
-        border: none;
+        &__text{
+          height: 50px;
+          width: 100%;
+          padding: 0 40px 0 10px;
+          border: none;
+        }
       }
       &__image{
         position: absolute;
