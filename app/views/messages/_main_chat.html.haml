@@ -11,15 +11,10 @@
       .main__group__right__edit
         = link_to edit_group_path(@group) do
           Edit
+
   .main__list
-    %p.main__list__name
-      name
-      %span 2019/11/20(wed)17:17:00
-    %p.main__list__message おはよう！
-    %p.main__list__name
-      name
-      %span 2019/11/20(wed)17:17:00
-    %p.main__list__message おはよう！
+    = render @messages
+
   .main__form
     = form_for [@group, @message] do |f|
       .new_message__contents
