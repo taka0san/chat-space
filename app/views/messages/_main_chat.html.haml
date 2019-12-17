@@ -18,7 +18,7 @@
   .main__form
     = form_for [@group, @message] do |f|
       .new_message__contents
-        = f.text_field :content, class: "new_message__contents__text", placeholder: "type a message"
+        = f.text_field :content, class: "field_with_errors__text", placeholder: "type a message"
         = f.label :image, class: "new_message__contents__image" do
           %i.fa.fa-image
           = f.file_field :image
