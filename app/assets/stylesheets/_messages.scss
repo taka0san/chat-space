@@ -112,24 +112,26 @@
     padding: 35px 40px 0;
     margin: 100px 0 90px;
     overflow: scroll;
-    &__top{
-      display: flex;
-      &__name{
-        color: #333333;
-        font-size: 16px;
-        margin-bottom: 12px;
+    &__box{
+      &__top{
+        display: flex;
+        &__name{
+          color: #333333;
+          font-size: 16px;
+          margin-bottom: 12px;
+        }
+        &__date{
+          color: #999999;
+          margin-left: 10px;
+          font-size: 12px;
+        }
       }
-      &__date{
-        color: #999999;
-        margin-left: 10px;
-        font-size: 12px;
-      }
-    }
-    &__bottom{
-      margin-bottom: 46px;
-      &__message{
-        color: #434A54;
-        font-size: 14px;
+      &__bottom{
+        margin-bottom: 46px;
+        &__message{
+          color: #434A54;
+          font-size: 14px;
+        }
       }
     }
   }
