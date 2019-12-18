@@ -3,7 +3,7 @@ $(function(){
   console.log(last_message_id);
   function buildHTML(message){
     // 「もしメッセージに画像が含まれていたら」という条件式
-    if (message.image) {
+    if (message.content && message.image) {
       var html = `<div class="main__list__box" data-message-id="${message.id}">
                     <div class="main__list__box__top">
                       <div class="main__list__box__top__name">
@@ -20,7 +20,7 @@ $(function(){
                       <img src="${message.image}">
                     </div>
                   </div>`
-    } else {
+    } else if(message.content){
       var html = `<div class="main__list__box" data-message-id="${message.id}">
                     <div class="main__list__box__top">
                       <div class="main__list__box__top__name">
@@ -34,6 +34,20 @@ $(function(){
                       <div class="main__list__box__bottom__message">
                         ${message.content}
                       </div>
+                    </div>
+                  </div>`
+    } else if (message.image){
+      var html = `<div class="main__list__box" data-message-id="${message.id}">
+                    <div class="main__list__box__top">
+                      <div class="main__list__box__top__name">
+                        ${message.user_name}
+                      </div>
+                      <div class="main__list__box__top__date">
+                        ${message.created_at}
+                      </div>
+                    </div>
+                    <div class="main__list__box__bottom">
+                      <img src="${message.image}">
                     </div>
                   </div>`
     }
