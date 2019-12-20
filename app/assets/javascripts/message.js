@@ -91,7 +91,7 @@ $(function(){
         data: {id: last_message_id}
       })
       .done(function(messages) {
-        console.log(1)
+        console.log(1);
         var insertHTML = '';
         $.each(messages, function(i, message) {
           insertHTML += buildHTML(message)
